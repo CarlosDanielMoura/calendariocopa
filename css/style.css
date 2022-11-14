@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+        --color-fundo-card: #1A1F1B;
+        --color-date: #F7DD43;
+        --color-day: #E1E1E6;
+
+        --color-border: #047C3F;
+        --color-line:  #323238;
+}
+
+
+
+body{
+    background-image: url("../assets/fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul,li{
+   list-style: none;
+}
+
+/*HEADER DE LOGO NLWCOPA*/
+
+.hearder_logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 3.25rem;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3.93rem;
+    margin-left: 21.125rem;
+    margin-right: 21.125rem;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 19.75rem;
+    gap: 3.31rem;
+
+    background-color: var(--color-fundo-card);
+    border-radius: 6px;
+    border-bottom: 3px solid var(--color-border);
+}
+
+.card:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 19.75rem;
+    gap: 3.31rem;
+
+    background-color: var(--color-fundo-card);
+    border-radius: 6px;
+    border-bottom: 3px solid var(--color-border);
+    box-shadow: var(--color-border) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    cursor: pointer;
+}
+
+
+
+.card > h2{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-date);
+
+    font-weight: 500;
+    line-height: 125%;
+
+    border: 2px solid var(--color-border);
+    border-radius: 6px;
+
+  
+    height: 2.875rem;
+
+    margin-top: 2rem;
+    padding: 8px 16px;
+}
+.card > h2 > span{
+    font-size: 0.875rem;
+    color: var(--color-day);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 125%;
+    margin-left: 1.25rem;
+}
+
+.card > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card > ul > li:nth-child(-n+3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.375rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+
+
+.card > ul > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.375rem;
+    padding: 1rem;
+}
+
+.card > ul > li > strong{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: var(--color-day);
+    font-size: 2.25rem;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .cards {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card{
+        border-bottom: 2px solid var(--color-date);
+    }
+    .card:hover{
+        border-bottom: 2px solid var(--color-date);
+        box-shadow: var(--color-date) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    }
+  }
+
+  /*ANIMAÇÕES*/
+
+  @keyframes float{
+    0%{
+        transform: translatey(5px);
+    }
+    50%{
+        transform: translatey(-5px);
+    }
+    100%{
+        transform: translatey(5px);
+    }
+  }
