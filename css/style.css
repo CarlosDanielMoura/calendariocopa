@@ -158,6 +158,12 @@ ul,li{
     }
   }
 
+  @media only sreen and (max-width: 300px) {
+        .cards{
+            margin: 2rem;
+        }
+  }
+
   /*ANIMAÇÕES*/
 
   @keyframes float{
